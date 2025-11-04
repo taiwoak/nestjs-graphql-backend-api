@@ -55,20 +55,20 @@ export class Post {
   @Prop({ required: true })
   content: string;
 
-  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true })
+  @Prop({ required: true, index: true })
   authorId: string;
 
-  @Prop({ type: [{ type: mongoose.Schema.Types.ObjectId, ref: 'User' }], default: [] })
-  likedBy: string[];
-
-  @Prop({ type: [{ type: mongoose.Schema.Types.ObjectId, ref: 'User' }], default: [] })
-  dislikedBy: string[];
-
-  @Prop({ default: 0 })
+  @Prop({ default: 0, min: 0 })
   likeCount: number;
 
-  @Prop({ default: 0 })
+  @Prop({ default: 0, min: 0 })
   dislikeCount: number;
+
+  @Prop({ type: [String], default: [], index: true })
+  likedBy: string[];
+
+  @Prop({ type: [String], default: [], index: true })
+  dislikedBy: string[];
 }
 ```
 
@@ -436,4 +436,5 @@ Then open **http://localhost:3000/graphql** and start testing with the mock toke
 ---
 
 **Project Built By**: Taiwo Akerele
+
 **Stack**: NestJS • GraphQL • MongoDB • Redis • Docker • GCP
