@@ -1,0 +1,16 @@
+node_modules
+dist
+.git
+.gitignore
+.vscode
+.idea
+coverage
+npm-debug.log
+*.md
+test
+.env
+.env.local
+.env.*.local
+.eslintrc.js
+.prettierrc
+tsconfig.build.json
