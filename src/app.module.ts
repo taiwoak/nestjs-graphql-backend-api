@@ -17,7 +17,7 @@ import { DateScalar } from './common/scalars/date.scalar';
   imports: [
     ConfigModule.forRoot({ isGlobal: true, envFilePath: '.env' }),
 
-    MongooseModule.forRoot(process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/awari', {
+    MongooseModule.forRoot(process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/nestjs', {
       connectionFactory: (connection) => {
         connection.on('connected', () => console.log('MongoDB connected successfully'));
         connection.on('error', (error) => console.error('MongoDB connection error:', error));

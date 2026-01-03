@@ -1,4 +1,4 @@
-# Awari Backend Assessment API
+# NestJS GraphQL Backend API
 
 This is a **NestJS GraphQL API** that implements real-time post updates using **MongoDB**, **Redis Pub/Sub**, and **GraphQL Subscriptions**.  
 It supports creating posts, liking/disliking posts, and streaming live updates to connected clients via WebSockets.  
@@ -30,8 +30,8 @@ docker compose up --build
 ```
 
 This command:
-- Builds the NestJS application container (`awari-api`)
-- Starts **MongoDB** (`awari-mongo`) and **Redis** (`awari-redis`)
+- Builds the NestJS application container (`nestjs-api`)
+- Starts **MongoDB** (`nestjs-mongo`) and **Redis** (`nestjs-redis`)
 - Exposes the GraphQL API at port **3000**
 
 ---
